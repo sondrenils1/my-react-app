@@ -1,0 +1,167 @@
+/* Welcome to the Oceanic Voyage 🌊 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* The Seaside Navbar: Where the Tides Converge */
+.navbar {
+  background: #0077b6; /* Deep Blue Sea */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* The Nautical Compass: Guiding Your Journey */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* The Captain's Log: Charting the Course */
+.container {
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+/* The Lighthouse Logo: Illuminating the Way */
+.navbar-logo {
+  color: #f1faee; /* Whispering White */
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* The Anchor Icon: Steadfast and Strong */
+.navbar-icon {
+  margin-right: 0.5rem;
+  color: #a8dadc; /* Sea Foam Green */
+}
+
+/* The Sailors' Menu: Exploring the Options */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+/* The Navigation Buoy: Guiding Your Path */
+.nav-item {
+  height: 80px;
+  border-bottom: 2px solid transparent;
+}
+
+/* The Seafarer's Chart: Navigating the Waters */
+.nav-item:hover {
+  border-bottom: 2px solid #1193be; /* Cerulean Waters */
+}
+
+/* The Waves of Links: Dancing in Harmony */
+.nav-links {
+  color: #f1faee; /* Whispering White */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+/* The Wayfinder: Marking the Current Page */
+.activated {
+  color: #bdcdd2; /* Cerulean Waters */
+}
+
+/* The Navigational Stars: Unveiling the Hidden Menu */
+.fa-bars {
+  color: #ffffff; /* Whispering White */
+}
+
+/* The Compass Rose: Steering the Mobile Path */
+.menu-icon {
+  display: none;
+}
+
+/* A Voyage to the Mobile Isles */
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  /* The Mobile Sea Map: Revealing the Menu */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  /* The Mobile Sea Map (Active): Charting the Course */
+  .nav-menu.active {
+    background: #0077b6; /* Deep Blue Sea */
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+
+  /* The Mobile Sea Links: Exploring the Isles */
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  /* The Mobile Sea Links (Hover): Diving into Adventure */
+  .nav-links:hover {
+    color: #0096c7; /* Cerulean Waters */
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+
+  /* The Mobile Sea Anchor: Keeping the Ship Steady */
+  .nav-item:hover {
+    border: none;
+  }
+
+  /* The Mobile Lighthouse Logo: Shining Brightly */
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  /* The Mobile Compass: Guiding the Way */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
